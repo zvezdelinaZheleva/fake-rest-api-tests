@@ -3,7 +3,6 @@ name: API Tests CI
 on:
   push:
     branches:
-      - main
       - feature/*
   pull_request:
     branches:
@@ -43,6 +42,6 @@ jobs:
       - name: Deploy Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
-            github_token: ${{ secrets.MY_GITHUB_TOKEN }}
-            publish_branch: gh-pages
-            publish_dir: target/allure-report
+          github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: target/allure-report
