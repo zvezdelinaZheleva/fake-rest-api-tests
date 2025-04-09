@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - feature/*
   pull_request:
     branches:
       - main
@@ -39,8 +40,9 @@ jobs:
       - name: Generate Allure Report
         run: mvn allure:report
 
-      - name: Upload Allure Report
-        uses: actions/upload-artifact@v4
+      - name: Deploy Allure Report to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          name: allure-report
-          path: target/site/allure-maven/index.html
+            github_token: ${{ secrets.MY_GITHUB_TOKEN }}
+            publish_branch: gh-pages
+            publish_dir: target/allure-report
