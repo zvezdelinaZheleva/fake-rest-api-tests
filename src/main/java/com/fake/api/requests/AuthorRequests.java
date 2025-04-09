@@ -4,7 +4,7 @@ import com.fake.api.configs.ApplicationConfigLoader;
 import io.restassured.response.Response;
 
 public class AuthorRequests extends BaseRequest {
-    private final String AUTHORS_URL = ApplicationConfigLoader.getProperty("authorsUrl");
+    private final String AUTHORS_URL = ApplicationConfigLoader.getProperty("authorsEndpoint");
 
     public Response retrieveAllAuthors() {
         return sendRequest(AUTHORS_URL, GET, null, null);

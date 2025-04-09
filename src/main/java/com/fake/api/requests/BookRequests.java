@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 
 public class BookRequests extends BaseRequest {
 
-    private final String BOOKS_URL = ApplicationConfigLoader.getProperty("booksUrl");
+    private final String BOOKS_URL = ApplicationConfigLoader.getProperty("booksEndpoint");
 
     public Response retrieveAllBooks() {
         return sendRequest(BOOKS_URL, GET, null, null);
