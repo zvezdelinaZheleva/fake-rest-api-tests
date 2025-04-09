@@ -9,31 +9,27 @@ It contains automated tests for a fake REST API.
 
 ## Project structure
 
-├── main
-│   ├── java
-│       ├── configs              # Class for loading the configuration properties
-│       ├── models               # POJO classes 
-│       ├── repository           # Repositories to provide test data for tests
-│       ├── requests             # Classes encapsulating GET, POST, PUT, DELETE requests
-│   
-│       
-├── test
-├── java
-│   ├── constants                # Error constants used in the tests
-│   ├── error_messages           # Class with methods for verification of the errors
-│   ├── tests                    # Classes with tests for authors and books
-└── resources
-    ├── data                     # Valid data for authors and books
-    ├── application.properties   # Configurations used for the tests
-    └── testng.xml               # TestNG configuration
+**.github/workflows**        : Contains GitHub Actions workflow files for continuous integration.  
 
+**src/main/java/configs**    : Class for loading the configuration properties.  
+**src/main/java/models**     : POJO classes  
+**src/main/java/repository** : Repositories to provide test data for tests  
+**src/main/java/requests**   : Classes encapsulating GET, POST, PUT, DELETE requests  
+
+**src/test/java/constants**  : Error constants used in the tests  
+**src/test/java/error_messages**                 : Class with methods for verification of the errors  
+**src/test/java/tests**                         : Classes with tests for authors and books  
+**src/test/resources/data**                      : Valid data for authors and books  
+**src/test/resources/application.properties**    : Configurations used for the tests  
+**src/test/resources/testng.xml**                : TestNG configuration  
+   
 
 ## Running the Tests
 
 Prerequisites:
-Java: Version 17
-Maven: For project build and dependency management
-Allure: For generating the test reports
+1) Java: Version 17
+2) Maven: For project build and dependency management
+3) Allure: For generating the test reports
 
 1. **Clone the Repository**:
    
@@ -53,7 +49,7 @@ Allure: For generating the test reports
 
 ## CI/CD
 
- The project uses Github Actions for execution of the tests on every push and pull request to the master or feature branch.
+ The project uses Github Actions for execution of the tests on every push and pull request to the master or feature branch.  
  It also generates allure reports and deploy them to Github Pages.
  
 
